@@ -1,0 +1,14 @@
+server:
+  port: 6001
+spring:
+  application:
+    name: consul-provider
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        register: true
+        service-name: consul-provider
+        health-check-path: /health
+        health-check-interval: 15s
